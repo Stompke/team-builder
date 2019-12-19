@@ -1,9 +1,16 @@
 import React from 'react';
 
 const Member = (props) => {
-
     return (
-        <h1>Hi my name is {props.name}. And I am a {props.role}. You can reach me at {props.email}</h1>
+        <div>
+            {/* <h1>Hi my name is {props.name}</h1> 
+            <h2>And I am a {props.role}.</h2>  */}
+            {props.name ? <h1>Hi my name is {props.name}</h1> : ''}
+            {props.role ? <h2>And I am a {props.role}.</h2> : ''}
+            {props.email ? <h1>You can reach me at {props.email}</h1> : ''}
+            {/* <h3>You can reach me at {props.email}  </h3> */}
+            <button onClick={props.editMember('sup')}>edit</button>
+        </div>
     )
 }
 
